@@ -1,6 +1,8 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: '图书馆采购系统',
+
+  showSettings: true,
 
   /**
    * @type {boolean} true | false
@@ -12,5 +14,11 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: false
+  sidebarLogo: true,
+
+  /**
+   * @type {boolean} true | false
+   * @description Whether need tagsView
+   */
+  tagsView: true
 }
