@@ -14,12 +14,13 @@
       fit
       highlight-current-row
       style="width: 100%;"
+      max-height="780px"
       @selection-change="handleSelectionChange"
     >
       <el-table-column type="selection" align="center" width="40" />
       <el-table-column label="封面(可放大)" align="center">
         <template slot-scope="{row}">
-          <el-image class="table-td-thumb" :src="row.bookPicUrl" :preview-src-list="[row.bookPicUrl]" />
+          <el-image class="table-td-thumb" :src="row.bookPicUrl" :preview-src-list="[row.bookPicUrl]" fit="scale-down" style="height: 100px;width: 100px" />
         </template>
       </el-table-column>
       <el-table-column label="书名" align="center">
@@ -108,10 +109,6 @@ export default {
     cancelEdit(row) {
       row.bookCount = row.originalBookCount
       row.edit = false
-      this.$message({
-        message: '数量重设取消',
-        type: 'warning'
-      })
     },
     confirmEdit(row) {
       resetCartBookCount(row.bookId, row.bookCount).then(res => {

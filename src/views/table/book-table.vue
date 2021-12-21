@@ -33,6 +33,7 @@
       fit
       highlight-current-row
       style="width: 100%;"
+      max-height="680px"
       @selection-change="handleSelectionChange"
     >
       <el-table-column type="selection" align="center" width="40" />
